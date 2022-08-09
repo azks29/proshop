@@ -35,7 +35,7 @@ const upload = multer({
   },
 });
 
-router.post("/", upload.single("image"), (erq, res) => {
+router.post("/", upload.single("image"), (req, res) => {
   res.json(`/${req.file.path}`);
 });
 
